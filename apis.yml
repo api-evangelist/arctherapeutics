@@ -1,23 +1,61 @@
 aid: arctherapeutics
+
 name: Arctherapeutics
-description: 'Arctherapeutics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Arctherapeutics develops and provides specialized radiosurgical solutions for the treatment of brain metastases. The company partners
+  with hospitals to deliver turnkey systems, including the Zap X radiosurgical unit, and offers comprehensive support ranging from facility design
+  to virtual tumor boards. Their mission focuses on innovative management of metastatic brain tumors, integrating multidisciplinary clinical,
+  technical, and operational expertise to improve patient outcomes.
+
 url: https://raw.githubusercontent.com/api-evangelist/arctherapeutics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Healthcare
+- Medical Devices
+- Radiosurgery
+- Oncology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arctherapeutics-hosts.yml
+- type: DomainSecurity
+  url: security/arctherapeutics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/arctherapeutics
+  url: https://www.arctherapeutics.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Main site returns a JavaScript shell with no machine‑readable API documentation.
+  evidence:
+  - url: https://www.arctherapeutics.com
+    status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
